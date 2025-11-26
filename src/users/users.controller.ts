@@ -32,9 +32,6 @@ export class UsersController {
     return this.usersService.findAll();
   }
 
-  // ⚠️ IMPORTANT: Specific routes MUST come BEFORE dynamic :id routes
-  // Put all /users/:id/something routes here, before GET /users/:id
-
   @Get(':id/favorites')
   getUserFavorites(
     @Param('id', ParseIntPipe) id: number,

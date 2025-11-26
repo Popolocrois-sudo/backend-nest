@@ -6,7 +6,6 @@ const prisma = new PrismaClient();
 
 @Injectable()
 export class AppService {
-<<<<<<< HEAD
   getHello() {
     return {
       status: 'Backend is online!',
@@ -18,6 +17,7 @@ export class AppService {
     try {
       // Jalankan query sederhana
       await prisma.$queryRaw`SELECT 1 + 1 AS result`;
+
       return {
         database: '✅ Connected to MariaDB!',
         status: 'OK',
@@ -30,12 +30,9 @@ export class AppService {
         timestamp: new Date().toISOString(),
       };
     }
-=======
-  getHello(): string {
-    return 'Recipe Sharing API is running!';
   }
 
-  getHealth(): object {
+  getHealth() {
     return {
       status: 'healthy',
       timestamp: new Date().toISOString(),
@@ -44,7 +41,7 @@ export class AppService {
     };
   }
 
-  getApiInfo(): object {
+  getApiInfo() {
     return {
       name: 'sharerecipe-api berfungsi',
       description: 'A REST API Backend untuk ShareRecipe Application',
@@ -59,6 +56,5 @@ export class AppService {
         reviews: '/reviews',
       },
     };
->>>>>>> fitur-baru
   }
 }
